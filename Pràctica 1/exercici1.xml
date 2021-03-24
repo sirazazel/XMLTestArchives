@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<ciutats>
+    <ciutat>
+        <nom>
+            Nova Delhi
+        </nom>
+        <pais continent = "Asia">
+            India
+        </pais>
+        
+    </ciutat>
+    <ciutat>
+        <nom>
+            Lisboa
+        </nom>
+        <pais continent = "Europa">
+            Portugal
+        </pais>
+    </ciutat>
+    <ciutat>
+        <nom>
+            El Cairo
+        </nom>
+        <pais continent = "África">
+            Egipte
+        </pais>
+    </ciutat>
+</ciutats>

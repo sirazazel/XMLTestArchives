@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tickets[
+    <!ELEMENT tickets (dades*)>
+    <!ELEMENT dades (timestamp*, net*,formapag*)>
+    <!ATTLIST dades codi ID #REQUIRED>
+    <!ELEMENT timestamp (data,hora)>
+    <!ELEMENT data (#PCDATA)>
+    <!ELEMENT hora (#PCDATA)>
+    <!ELEMENT net (brut, iva, valorIva)>
+    <!ELEMENT brut (#PCDATA)>
+    <!ELEMENT iva (#PCDATA)>
+    <!ELEMENT valorIva (#PCDATA)>
+    <!ELEMENT formapag (tipuspag, ntarjeta?, nomclient)> 
+    <!ELEMENT tipuspag (#PCDATA)>   
+    <!ELEMENT ntarjeta (#PCDATA)>
+    <!ELEMENT nomclient (#PCDATA)>
+]>
+<tickets>
+    <dades codi="tick20210319_001">
+        <timestamp>
+            <data></data>
+            <hora></hora>
+        </timestamp>
+        <net>
+            <brut></brut>
+            <iva>21%</iva>
+            <valorIva></valorIva>
+        </net>
+        <formapag>
+            <tipuspag></tipuspag>
+            <ntarjeta></ntarjeta>
+            <nomclient></nomclient>
+        </formapag>
+    </dades>
+</tickets>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE productes [
+    <!ELEMENT productes (producte)*>
+    <!ELEMENT producte (identificació, nom)>
+    <!ELEMENT identificació (#PCDATA | codi | id)*>
+    <!ELEMENT codi (#PCDATA)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT nom (#PCDATA)>
+]>
+
+<productes>
+    
+    <producte>
+        <identificació>
+            Són de mànec vermell i en queden 10 unitats.
+            <codi>MAR264</codi>
+        </identificació>
+        <nom>martell</nom>
+    </producte>
+
+    <producte>  
+        <identificació>
+            <!--codi>CLAU387</codi> ID O CODI-->
+            <id>678984</id>
+            No en queda cap al magatzem.
+        </identificació>
+        <nom>clau anglesa</nom>
+    </producte>
+
+</productes>

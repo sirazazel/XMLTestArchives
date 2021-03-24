@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aficions [
+  <!ELEMENT aficions (aficio*)>
+  <!ELEMENT aficio (#PCDATA)>
+]>
+<aficions>
+  <aficio>Llegir</aficio>
+  <aficio>Nadar</aficio>
+  <aficio>Caminar</aficio>
+</aficions>

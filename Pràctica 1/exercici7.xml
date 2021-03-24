@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE begudes [
+    <!ELEMENT begudes (beguda)*>
+    <!ELEMENT beguda ((codi | nom), preu)>
+    <!ELEMENT codi (#PCDATA)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT preu (#PCDATA)>
+]>
+
+<begudes>
+    <beguda>
+        <codi>C09</codi>
+        <preu>1,70</preu>
+    </beguda>
+    <beguda>
+        <nom>taronjada</nom>
+        <preu>1,05</preu>
+    </beguda>
+</begudes>
