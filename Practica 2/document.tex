@@ -1,0 +1,163 @@
+\documentclass{article}
+
+
+\usepackage{geometry}
+
+
+\title{Pràctica 2 Llenguatge de Marques}
+\author{Francesc Mut Mollà}
+
+\begin{document}
+\maketitle
+\newpage
+\section{Exercici 1}
+
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (llibre)>
+    <!ELEMENT llibre (titol, idioma, genere, sense_catalogar?, autor, web?, portada?)>
+    <!ATTLIST llibre codi ID #REQUIRED>
+    <!ATTLIST llibre any CDATA >
+    <!ELEMENT titol (#PCDATA)>
+    <!ELEMENT idioma (#PCDATA)>
+    <!ELEMENT genere (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT web (#PCDATA)>
+    <!ELEMENT portada (#PCDATA)>
+]>
+
+<biblioteca> 
+    <llibre codi="LL1"  any="2002"> 
+    <titol>El instituto</titol> 
+    <idioma>Anglès</idioma> 
+    <genere>suspens</genere> 
+    <autor>Stephen King</autor> 
+    <web>https://www.todostuslibros.com/libros/el-instituto_978-84-01-02235-7</web> 
+    <portada>/imatges/elinstituto.gif</portada> 
+    </llibre>
+    <Llibre codi=LL2> 
+    <titol> La ruta infinita</titol></titol> 
+    <idioma>Espanyol</idioma> 
+    <genere>històrica</genere> 
+    <sense_catalogar/> 
+    <autor>José Calvo Poyato</autor>
+    </llibre> 
+</biblioteca>
+
+\end{verbatim}
+\newpage
+
+
+\section{Exercici 2}
+
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE productes [
+<!ELEMENT productes (producte*)>
+<!ELEMENT producte (ratoli|teclat|monitor)>
+<!ELEMENT ratoli (#PCDATA)>
+<!ATTLIST ratoli codi ID #REQUIRED>
+<!ELEMENT monitor (#PCDATA)>
+<!ATTLIST monitor codi ID #REQUIRED>
+<!ELEMENT teclat (#PCDATA)>
+<!ATTLIST teclat codi ID #REQUIRED>
+]>
+<productes>
+    <producte>
+        <ratoli codi="r01"> sense fil space </ratoli>
+    </producte>
+    <producte>
+        <teclat codi= "t03">Teclat de colors </teclat>
+    </producte>
+    <producte>
+        <monitor codi="m100">Tàctil</monitor>
+        <!--Producte no pot esser teclat I monitor.-->
+    </producte>
+ </productes>
+\end{verbatim}
+\newpage
+
+\section{Exercici 3}
+
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE relacio [
+    <!ELEMENT relacio (persona*)>
+    <!ELEMENT persona (nom, email, parentesc)>
+
+    <!ATTLIST persona identf ID #REQUIRED>
+    <!ATTLIST persona sexe (home|dona) #IMPLIED>
+  
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT parentesc EMPTY>
+  
+    <!ATTLIST parentesc pare ID >
+    <!ATTLIST parentesc germa ID >
+]>
+<relacio>
+    <persona sexe="home" identf="A01">
+        <nom>LLuís Merino</nom>
+        <email>llm@gmail.com</email>
+        <parentesc pare="B02 C03"/>
+    </persona>
+    <persona sexe="home" identf="B02">
+        <nom>Rodrigo Merino</nom>
+        <email>rodrigo@gmail.com</email>
+        <parentesc germa="C03"/>
+    </persona>
+    <persona identf="C03">
+        <nom>Ana Merino</nom>
+        <email>anam@icloud.com</email>
+        <parentesc germa="B02"/>
+    </persona>
+</relacio> 
+\end{verbatim}
+
+\section{Exercici 4}
+
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE lleis [
+    <!ELEMENT lleis (#PCDATA)>
+    <!ENTITY llei SYSTEM "llei.txt">
+]>
+<lleis>
+ &llei;
+</lleis>
+
+
+\end{verbatim}
+
+\section{Exercici 5 sense Atributs}
+
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE resfutbol [
+    <!ELEMENT resultat (local, visitant, gols-local, gols-visitant)>
+    <!ELEMENT local (nom, gols)>
+    <!ELEMENT visitant (nom, gols)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT gols (#PCDATA)>
+]>
+\end{verbatim} 
+
+\section{Exercici 5 amb Atributs}
+
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE resfutbol [
+    <!ELEMENT resultat (local, visitant)>
+    <!ELEMENT local (#PCDATA)>
+    <!ELEMENT visitant (#PCDATA)>
+    <!ATTLIST local gols ID #REQUIRED>
+    <!ATTLIST visitant gols ID #REQUIRED>
+]>
+\end{verbatim}
+\end{document}

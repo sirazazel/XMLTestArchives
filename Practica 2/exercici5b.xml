@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE resfutbol [
+    <!ELEMENT resultat (local, visitant)>
+    <!ELEMENT local (#PCDATA)>
+    <!ELEMENT visitant (#PCDATA)>
+    <!ATTLIST local gols ID #REQUIRED>
+    <!ATTLIST visitant gols ID #REQUIRED>
+]>

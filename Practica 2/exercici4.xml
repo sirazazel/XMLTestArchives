@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE lleis [
+    <!ELEMENT lleis (#PCDATA)>
+    <!ENTITY llei SYSTEM "llei.txt">
+]>
+<lleis>
+ &llei;
+</lleis>
