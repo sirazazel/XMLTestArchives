@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE biblioteca [
+  <!ELEMENT biblioteca (llibre*)>
+  <!ELEMENT llibre (titol, editorial, (edicio | ISBN), numero_de_pagines?, autor*)>
+  <!ELEMENT titol (#PCDATA)>
+  <!ELEMENT editorial (#PCDATA)>
+  <!ELEMENT edicio (#PCDATA)>
+  <!ELEMENT ISBN (#PCDATA)>
+  <!ELEMENT numero_de_pagines (#PCDATA)>
+  <!ELEMENT autor (#PCDATA)>
+  <!ATTLIST llibre codi ID #REQUIRED>
+]>
+
+<biblioteca>
+<llibre codi="id1">
+    <titol>No me cuentes tu vida</titol>
+    <editorial>Planeta</editorial>
+    <ISBN>9788408013877</ISBN>
+    <numero_de_pagines>464</numero_de_pagines>
+    <autor>Luis García Montero</autor>
+</llibre>
+<llibre codi="id2">
+    <titol>Física para la Ciencia y Tecnología</titol>
+    <editorial>Reverte</editorial>
+    <edicio>Primera edició</edicio>
+    <numero_de_pagines>702</numero_de_pagines>
+    <autor>Paul A. Tipler</autor>
+</llibre>
+</biblioteca>

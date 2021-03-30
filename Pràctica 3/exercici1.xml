@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE missatges [
+<!ELEMENT missatges (missatge)>
+<!ELEMENT missatge (telefono, fecha, hora, titol_missatge,cos_missatge)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT titol_missatge (#PCDATA)>
+<!ELEMENT cos_missatge (#PCDATA)>
+]>
+
+<missatges>
+    <missatge>
+        <telefono>123124125</telefono>
+        <fecha>30-04-21</fecha>
+        <hora>19:04:30</hora>
+        <titol_missatge>Lorem Ipsum</titol_missatge>
+        <cos_missatge>Dolor sit amet</cos_missatge>
+    </missatge>
+</missatges>

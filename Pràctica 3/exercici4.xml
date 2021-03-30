@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE seccio_esportiva [
+ <!ELEMENT seccio_esportiva (esport*)>
+ <!ELEMENT esport (equip, categoria?, poblacio)>
+ <!ATTLIST esport nom NMTOKENS #REQUIRED>
+ <!ATTLIST esport modalitat (individual | grup) #REQUIRED>
+ <!ELEMENT equip (#PCDATA)>
+ <!ATTLIST equip codi ID #REQUIRED>
+ <!ELEMENT categoria (#PCDATA)>
+ <!ELEMENT poblacio (#PCDATA)>
+ <!ATTLIST poblacio pais CDATA #IMPLIED>
+ ]>
+
+<seccio_esportiva>
+    <esport nom="Atletisme" modalitat="individual">
+        <equip codi = "C01">Club Els Verds</equip>
+        <categoria>Categoria Important</categoria>
+        <poblacio pais="Espanya">Llucmajor</poblacio>
+    </esport>
+    <esport nom="Bàsquet" modalitat="grup">
+        <equip codi="C02">Club Els Grocs</equip>
+        <categoria>Infantil Masculí</categoria>
+        <poblacio>Palma</poblacio>
+    </esport>
+    <esport nom="Bobsleigh" modalitat="individual">
+        <equip codi="C03">Bobsleigh de Randa</equip>
+        <categoria>Jocs d'hivern</categoria>
+        <poblacio>Algaida</poblacio>
+    </esport>
+</seccio_esportiva>

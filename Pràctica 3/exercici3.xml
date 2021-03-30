@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE llistaCompra [
+<!ELEMENT llistaCompra (producte*)> <!--Faltava un >-->
+<!ELEMENT producte (quantitat, nom, preu)>
+<!ATTLIST producte ref CDATA #REQUIRED>
+<!ATTLIST producte fecha CDATA #IMPLIED> 
+<!ATTLIST producte seccio (alimentacio | drogueria | congelats) #REQUIRED>
+<!ELEMENT nom (#PCDATA)> <!--Afegit element nom-->
+<!ELEMENT quantitat (#PCDATA)>
+<!ELEMENT preu (#PCDATA)>
+]>
+
+
+<llistaCompra>
+    <producte ref="1321" fecha="30-04-21" seccio="alimentacio">
+        <quantitat>15</quantitat>
+        <nom>Pepinos</nom>
+        <preu>3,30€</preu>
+    </producte>
+    <producte ref="5141" fecha="30-04-21" seccio="drogueria">
+        <quantitat>32</quantitat>
+        <nom>Aiguarrás</nom>
+        <preu>3,93</preu>
+    </producte>
+    <producte ref="1231" fecha="30-04-21" seccio="congelats">
+        <quantitat>12</quantitat>
+        <nom>Calamars</nom>
+        <preu>5,70</preu>
+    </producte>
+</llistaCompra>
